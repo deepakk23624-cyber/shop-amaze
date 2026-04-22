@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AMAZE GARMENTS – Premium Men's Fashion. Shop shirts, jeans, t-shirts and pants online. Fast shipping across India. WhatsApp ordering." />
+  <meta name="keywords"
+    content="men fashion India, shirts, jeans, t-shirts, pants, online clothing store, amaze garments" />
+  <meta property="og:title" content="AMAZE GARMENTS – Premium Men's Fashion" />
+  <meta property="og:description"
+    content="Shop luxury men's clothing – shirts, jeans, t-shirts and pants. WhatsApp ordering, UPI payment." />
+  <title>AMAZE GARMENTS | Premium Men's Fashion</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <!-- ============================================================
+     INTRO OVERLAY
+============================================================ -->
+  <div id="intro-overlay" role="presentation" aria-hidden="true">
+    <div class="intro-logo-wrap">
+      <img src="Component/logoshop.jpeg" alt="AMAZE GARMENTS Logo" class="intro-logo-img" />
+      <div class="intro-line"></div>
+      <div class="intro-brand-name">AMAZE GARMENTS</div>
+      <div class="intro-tagline">Premium Men's Fashion</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     NAVBAR
+============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <!-- Left nav links -->
+    <ul class="nav-links" role="list">
+      <li><a href="#products" id="nav-shop">Shop</a></li>
+      <li><a href="#products" id="nav-arrivals" onclick="document.querySelector('[data-filter=\'all\']').click()">New
+          Arrivals</a></li>
+      <li><a href="#store-info" id="nav-contact">Contact</a></li>
+    </ul>
+
+    <!-- Center logo -->
+    <a href="#" class="nav-logo" aria-label="AMAZE GARMENTS Home">
+      <img src="Component/logoshop.jpeg" alt="AG" class="nav-logo-img" />
+      <span class="nav-logo-text">Amaze Garments</span>
+    </a>
+
+    <!-- Right: search + cart -->
+    <div class="nav-right">
+      <button id="search-btn" class="nav-icon-btn" aria-label="Search" onclick="toggleSearch()">🔍</button>
+      <button class="nav-icon-btn" aria-label="Cart" title="Cart">
+        🛒
+        <span class="cart-count">0</span>
+      </button>
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"
+        onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Search Bar -->
+  <div id="search-bar" class="search-bar" role="search">
+    <input type="search" placeholder="Search shirts, jeans, t-shirts, pants…" aria-label="Search products" />
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#products">Shop</a>
+    <a href="#products">New Arrivals</a>
+    <a href="#categories">Categories</a>
+    <a href="#payment">Payment</a>
+    <a href="#store-info">Contact</a>
+    <a href="#policies">Policies</a>
+  </div>
+
+  <!-- ============================================================
+     HERO
+============================================================ -->
+  <section id="hero" aria-label="Hero banner">
+    <div class="hero-bg" role="img" aria-label="Fashion model in luxury clothing"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">New Collection 2026</p>
+      <h1 class="hero-title">AMAZE<br><span>GARMENTS</span></h1>
+      <p class="hero-subtitle">Men's Fashion Wear</p>
+      <a href="#products" class="hero-cta" id="hero-shop-now">
+        <span>Shop Now</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12,5 19,12 12,19" />
+        </svg>
+      </a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     CATEGORIES
+============================================================ -->
+  <section id="categories" class="section" aria-label="Product categories">
+    <div class="section-inner">
+      <header class="section-header reveal">
+        <span class="section-tag">Browse By</span>
+        <h2 class="section-title">Shop Categories</h2>
+        <div class="section-divider"></div>
+      </header>
+
+      <div class="categories-grid">
+        <div class="category-card reveal reveal-delay-1" role="button" tabindex="0" aria-label="Shop Shirts"
+          onclick="scrollToCategory('shirt')">
+          <div class="cat-bg shirts"></div>
+          <span class="cat-icon">👔</span>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">Shirts</div>
+            <div class="cat-count">4 Products</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+        <div class="category-card reveal reveal-delay-2" role="button" tabindex="0" aria-label="Shop Jeans"
+          onclick="scrollToCategory('jeans')">
+          <div class="cat-bg jeans"></div>
+          <span class="cat-icon">👖</span>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">Jeans</div>
+            <div class="cat-count">4 Products</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+        <div class="category-card reveal reveal-delay-3" role="button" tabindex="0" aria-label="Shop T-Shirts"
+          onclick="scrollToCategory('tshirt')">
+          <div class="cat-bg tshirts"></div>
+          <span class="cat-icon">👕</span>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">T-Shirts</div>
+            <div class="cat-count">4 Products</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+        <div class="category-card reveal reveal-delay-4" role="button" tabindex="0" aria-label="Shop Pants"
+          onclick="scrollToCategory('pants')">
+          <div class="cat-bg pants"></div>
+          <span class="cat-icon">🩳</span>
+          <div class="cat-overlay"></div>
+          <div class="cat-info">
+            <div class="cat-name">Pants</div>
+            <div class="cat-count">4 Products</div>
+          </div>
+          <div class="cat-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     PRODUCTS
+============================================================ -->
+  <section id="products" class="section" aria-label="Product listing">
+    <div class="section-inner">
+      <header class="section-header reveal">
+        <span class="section-tag">Our Collection</span>
+        <h2 class="section-title">Featured Products</h2>
+        <div class="section-divider"></div>
+      </header>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Filter products by category">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-tab" data-filter="shirt" role="tab" aria-selected="false">Shirts</button>
+        <button class="filter-tab" data-filter="jeans" role="tab" aria-selected="false">Jeans</button>
+        <button class="filter-tab" data-filter="tshirt" role="tab" aria-selected="false">T-Shirts</button>
+        <button class="filter-tab" data-filter="pants" role="tab" aria-selected="false">Pants</button>
+      </div>
+
+      <!-- Grid populated by JS -->
+      <div class="products-grid" id="products-grid" aria-label="Products grid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     ORDER FLOW
+============================================================ -->
+  <section id="order-flow" class="section" aria-label="How to order">
+    <div class="section-inner">
+      <header class="section-header reveal">
+        <span class="section-tag">Simple Steps</span>
+        <h2 class="section-title">How To Order</h2>
+        <div class="section-divider"></div>
+      </header>
+
+      <div class="flow-steps">
+        <div class="flow-step reveal reveal-delay-1">
+          <div class="flow-num">🛍️</div>
+          <div class="flow-step-title">Select Product</div>
+          <div class="flow-step-desc">Browse our collection and pick your favourite item</div>
+        </div>
+        <div class="flow-step reveal reveal-delay-2">
+          <div class="flow-num">💬</div>
+          <div class="flow-step-title">WhatsApp Order</div>
+          <div class="flow-step-desc">Tap "Order via WhatsApp" – message is auto-filled</div>
+        </div>
+        <div class="flow-step reveal reveal-delay-3">
+          <div class="flow-num">💳</div>
+          <div class="flow-step-title">Make Payment</div>
+          <div class="flow-step-desc">Pay via UPI and share the payment screenshot</div>
+        </div>
+        <div class="flow-step reveal reveal-delay-4">
+          <div class="flow-num">✅</div>
+          <div class="flow-step-title">Confirmation</div>
+          <div class="flow-step-desc">Order confirmed once payment is verified</div>
+        </div>
+        <div class="flow-step reveal reveal-delay-4">
+          <div class="flow-num">🚚</div>
+          <div class="flow-step-title">Shipping</div>
+          <div class="flow-step-desc">Dispatched via India Post with tracking number</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     PAYMENT
+============================================================ -->
+  <section id="payment" class="section" aria-label="Payment information">
+    <div class="section-inner">
+      <header class="section-header reveal">
+        <span class="section-tag">Secure Payment</span>
+        <h2 class="section-title">UPI Payment Only</h2>
+        <div class="section-divider"></div>
+      </header>
+
+      <div class="payment-container">
+        <div class="payment-info reveal">
+          <h3>Pay Before We Ship</h3>
+          <div class="upi-id-box">
+            <div>
+              <span class="label">UPI ID</span>
+              <span class="value" id="upi-id-display">amazegarments@upi</span>
+            </div>
+            <button class="copy-btn" id="copy-upi-btn" onclick="copyUPI()" aria-label="Copy UPI ID">Copy</button>
+          </div>
+          <div class="payment-note">
+            <span>⚠️</span>
+            <span>Orders are processed only after successful payment. Please share your payment screenshot on WhatsApp
+              after completing the transaction.</span>
+          </div>
+
+          <div style="margin-top:1.5rem; font-size:0.8rem; color: var(--gray); line-height:2;">
+            <div>✅ &nbsp;Google Pay, PhonePe, Paytm accepted</div>
+            <div>✅ &nbsp;Any UPI app works</div>
+            <div>✅ &nbsp;Amount must match exactly</div>
+          </div>
+        </div>
+
+        <div class="qr-wrap reveal reveal-delay-2">
+          <div class="qr-box" aria-label="UPI QR Code for payment">
+            <div class="qr-inner"></div>
+            <div class="qr-text">
+              📱 SCAN TO PAY<br><br>
+              <strong>AMAZE GARMENTS</strong><br><br>
+              UPI:<br>amazegarments@upi
+            </div>
+          </div>
+          <span class="qr-label">Scan with any UPI app</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     SHIPPING
+============================================================ -->
+  <section id="shipping" class="section" aria-label="Shipping information">
+    <div class="section-inner">
+      <header class="section-header reveal">
+        <span class="section-tag">Delivery</span>
+        <h2 class="section-title">Shipping Info</h2>
+        <div class="section-divider"></div>
+      </header>
+
+      <div class="shipping-cards">
+        <div class="shipping-card reveal reveal-delay-1">
+          <span class="shipping-icon">📦</span>
+          <h3>India Post Shipping</h3>
+          <p>All orders are dispatched via India Post Speed Post or Registered Post for safe and reliable delivery
+            across India.</p>
+          <a href="https://www.indiapost.gov.in/vas/pages/trackconsignment.aspx" target="_blank" rel="noopener"
+            class="tracking-link" id="track-link">
+            Track Your Order →
+          </a>
+        </div>
+        <div class="shipping-card reveal reveal-delay-2">
+          <span class="shipping-icon">⏱️</span>
+          <h3>Delivery Timeline</h3>
+          <p>Estimated delivery: <strong style="color:var(--white)">5–10 business days</strong> after order
+            confirmation. Remote areas may take up to 14 days.</p>
+        </div>
+        <div class="shipping-card reveal reveal-delay-3">
+          <span class="shipping-icon">🔍</span>
+          <h3>Order Tracking</h3>
+          <p>Tracking number is shared via WhatsApp once the order is dispatched. Use it on India Post's official
+            website to track your parcel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     POLICIES
+============================================================ -->
+  <section id="policies" class="section" aria-label="Store policies">
+    <div class="section-inner">
+      <header class="section-header reveal">
+        <span class="section-tag">Our Policies</span>
+        <h2 class="section-title">Store Policies</h2>
+        <div class="section-divider"></div>
+      </header>
+
+      <div class="policies-grid">
+        <div class="policy-card reveal reveal-delay-1">
+          <span class="policy-icon">🚫</span>
+          <h3>No Refund Policy</h3>
+          <p>All sales are <span class="policy-highlight">final</span>. We do not offer refunds once the order has been
+            placed and payment has been made. Please review your order carefully before placing it.</p>
+        </div>
+        <div class="policy-card reveal reveal-delay-2">
+          <span class="policy-icon">🔄</span>
+          <h3>3-Day Exchange</h3>
+          <p>We offer a <span class="policy-highlight">3-day exchange policy</span> from the date of delivery for size
+            or defect issues. Item must be unworn, unwashed, and in original condition with tags intact.</p>
+        </div>
+        <div class="policy-card reveal reveal-delay-3">
+          <span class="policy-icon">🕑</span>
+          <h3>Business Hours</h3>
+          <p>Customer support is available from <span class="policy-highlight">2:00 PM – 4:00 PM</span> daily. WhatsApp
+            messages outside these hours will be responded to the next day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     STORE INFO
+============================================================ -->
+  <section id="store-info" class="section" aria-label="Store information and contact">
+    <div class="section-inner">
+      <header class="section-header reveal">
+        <span class="section-tag">Find Us</span>
+        <h2 class="section-title">Store Information</h2>
+        <div class="section-divider"></div>
+      </header>
+
+      <div class="store-grid">
+        <!-- Address -->
+        <div class="store-block reveal reveal-delay-1">
+          <h3>📍 Our Address</h3>
+          <address>
+            AMAZE GARMENTS<br />
+            Shop No. 12, Fashion Market<br />
+            Main Bazaar Road<br />
+            New Delhi – 110001<br />
+            India
+          </address>
+        </div>
+
+        <!-- Contact -->
+        <div class="store-block reveal reveal-delay-2">
+          <h3>📞 Contact Us</h3>
+          <div class="contact-item">
+            <span>📱</span>
+            <a href="https://wa.me/919582243144" target="_blank" rel="noopener" id="wa-contact-link">+91 95822 43144</a>
+          </div>
+          <div class="contact-item">
+            <span>🕑</span>
+            <span style="color:var(--gray)">Support: 2:00 PM – 4:00 PM</span>
+          </div>
+          <div class="contact-item">
+            <span>📦</span>
+            <span style="color:var(--gray)">Shipping: India Post</span>
+          </div>
+          <div class="contact-item">
+            <span>💳</span>
+            <span style="color:var(--gray)">Payment: UPI only</span>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="store-block reveal reveal-delay-3">
+          <h3>🌐 Follow Us</h3>
+          <p style="margin-bottom:1rem; font-size:0.82rem;">Stay updated with our latest collections and offers</p>
+          <div class="social-links">
+            <a href="https://wa.me/919582243144" target="_blank" rel="noopener" class="social-link"
+              aria-label="WhatsApp" title="WhatsApp">💬</a>
+            <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Facebook" title="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="YouTube" title="YouTube">▶️</a>
+            <a href="#" class="social-link" aria-label="Telegram" title="Telegram">✈️</a>
+          </div>
+          <div style="margin-top:1.5rem; font-size:0.75rem; color:var(--gray);">
+            💡 <em>DM us on WhatsApp for exclusive deals & bulk orders.</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+     FOOTER
+============================================================ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-logo">AMAZE <span>GARMENTS</span></div>
+      <p class="footer-copy">© 2026 AMAZE GARMENTS. All rights reserved. | UPI Only | No Refunds | 3-Day Exchange</p>
+      <div class="footer-policy-links">
+        <a href="#policies">Exchange Policy</a>
+        <a href="#payment">Payment</a>
+        <a href="#shipping">Shipping</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+     FLOATING WHATSAPP BUTTON
+============================================================ -->
+  <div class="floating-wa" aria-label="Contact on WhatsApp">
+    <span class="floating-wa-tip">Chat with us!</span>
+    <a href="https://wa.me/919582243144" target="_blank" rel="noopener" class="floating-wa-btn" id="floating-wa-btn"
+      aria-label="Open WhatsApp chat">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+      </svg>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
